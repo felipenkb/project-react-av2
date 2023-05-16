@@ -4,8 +4,8 @@ function Loading() {
     return (
         <div
             className='loading-overlay centralize'
-            data-test-id="loading">Loading...
-         </div>
+            data-test-id="loading">Carregando...
+        </div>
     )
 }
 
