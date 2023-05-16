@@ -19,7 +19,7 @@ export default function ValidationError(props: ValidationErrorProps) {
 
     if (props.type === 'required') {
         return (
-            props.value == '' ?
+            props.value === '' ?
                 error
                 : null
         )
