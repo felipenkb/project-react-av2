@@ -46,18 +46,16 @@ function LoginPage(props: LoginPageProps) {
 
   return (
    <main className='centralize'>
-      <h1>Login</h1>
+      <h1>Entrar</h1>
       <form>
         <input type="email" placeholder='Email' value={form.email.value}
           onChange={event => setForm({...form, email: {
-          hasChanged: true, value: event.target.value
-          }})}
-          data-testid='email'
+          hasChanged: true, value: event.target.value}})}
         />
 
         <ValidationError
           hasChanged={form.email.hasChanged}
-          errorMessage='Email é Obrigatorio'
+          errorMessage='O email é obrigatorio'
           testId='email-required'
           type='required'
           value={form.email.value}
@@ -65,7 +63,7 @@ function LoginPage(props: LoginPageProps) {
 
         <ValidationError
           hasChanged={form.email.hasChanged}
-          errorMessage='Email é invalido'
+          errorMessage='O email é inválido'
           testId='email-invalid'
           type='email'
           value={form.email.value}
@@ -75,12 +73,11 @@ function LoginPage(props: LoginPageProps) {
           onChange={event => setForm({...form, password: {
             hasChanged: true, value: event.target.value
           }})}
-          data-test-id="password"
         />
 
         <ValidationError
           hasChanged={form.password.hasChanged}
-          errorMessage='Senha é obrigatoria'
+          errorMessage='A senha é obrigatória'
           testId='password-required'
           type='required'
           value={form.password.value}
@@ -97,7 +94,6 @@ function LoginPage(props: LoginPageProps) {
 
         <button type="button"
          className='outline'
-         data-testid= "register-button"
          onClick={goToRegisterPage}>
           Registrar
         </button>

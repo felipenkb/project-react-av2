@@ -43,7 +43,7 @@ function RegisterPage(props: RegisterPageProps) {
 
     return (
         <main className='centralize'>
-           <h1>Register</h1>
+           <h1>Registrar</h1>
            <form>
              <input type="email" placeholder='Email' value={form.email.value}
                onChange={event => setForm({...form, email: {
@@ -54,7 +54,7 @@ function RegisterPage(props: RegisterPageProps) {
      
              <ValidationError
                hasChanged={form.email.hasChanged}
-               errorMessage='Email é Obrigatorio'
+               errorMessage='O email é obrigatório'
                testId='email-required'
                type='required'
                value={form.email.value}
@@ -62,7 +62,7 @@ function RegisterPage(props: RegisterPageProps) {
      
              <ValidationError
                hasChanged={form.email.hasChanged}
-               errorMessage='Email é invalido'
+               errorMessage='O email é inválido'
                testId='email-invalid'
                type='email'
                value={form.email.value}
@@ -72,12 +72,11 @@ function RegisterPage(props: RegisterPageProps) {
                onChange={event => setForm({...form, password: {
                  hasChanged: true, value: event.target.value
                }})}
-               data-test-id="password"
              />
      
              <ValidationError
                hasChanged={form.password.hasChanged}
-               errorMessage='Senha é obrigatoria'
+               errorMessage='A senha é obrigatória'
                testId='password-required'
                type='required'
                value={form.password.value}
@@ -86,8 +85,7 @@ function RegisterPage(props: RegisterPageProps) {
              {error && <div className='error' data-testid="error">{error.message}</div>}
      
              <button type="button" className= 'solid'
-               data-testid="register-button"
-               disabled={!isEmailValid(form.email.value) || !form.password.value }
+               disabled={!isEmailValid(form.email.value) || !form.password.value}
                onClick={register}>
                Registrar
              </button>
