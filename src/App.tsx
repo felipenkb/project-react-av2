@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LoginPage authService={new AuthService()} />} />
-        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/register' element={<RegisterPage authService={new AuthService()} />} />
         <Route path='/home' element={<HomePage />} />
       </Routes>
     </BrowserRouter>
