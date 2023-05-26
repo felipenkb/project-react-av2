@@ -32,7 +32,7 @@ function LoginPage(props: LoginPageProps) {
       form.email.value, form.password.value
     ).then(() => {
       setShowLoading(false);
-      navigate('/home');
+      navigate('/dashboard');
     }).catch(error => {
       setShowLoading(false);
       setError(error);
